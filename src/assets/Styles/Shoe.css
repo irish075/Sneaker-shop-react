@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Lato", sans-serif; */
+  background: #070111;
+  /* color: #D1725F; */
+  /* color: #DD7A96; */
+  /* color: #F7F5DD; */
+  /* color: #FF80A4; */
+  /* font-family: "Rubik", sans-serif; */
+  font-family: "Merriweather Sans", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+:root {
+  --clr: #fff;
+  --clr1: #ff80a4;
+  --font: 1.3rem;
+  --font1: 2rem;
+  --font2: 3rem;
+}
+
+/*======================================
+ ___NAVABAR STYLING START HERE___ 
+ =======================================*/
+header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr);
+  /* margin-top: 1rem; */
+  align-items: center;
+}
+.logo {
+  font-size: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+span {
+  color: var(--clr1);
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.links li {
+  position: relative;
+  padding: 1rem;
+}
+.links a {
+  color: var(--clr);
+  font-weight: 300;
+}
+.links li:hover a {
+  color: var(--clr1);
+}
+
+.nav-icons {
+  color: #fff;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-icons .font-icon {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 1px solid #ffb3c886;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: border 0.3 linear;
+}
+.font-icon:hover {
+  border: 2px solid var(--clr1);
+}
+.menu-icon {
+  display: none;
+}
+.links.open-nav {
+  display: flex;
+  position: absolute;
+  background: #fff;
+}
+
+/*======================================
+ ___Hero-Section STYLING START HERE___ 
+ =======================================*/
+
+.Hero {
+  color: var(--clr);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 4rem;
+}
+.Hero h1 {
+  font-size: var(--font2);
+  letter-spacing: 2px;
+}
+.Hero p {
+  font-weight: 300;
+  margin-block: 1rem;
+  color: rgb(180, 178, 178);
+}
+.hero-btn {
+  margin-block: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  margin-inline: auto;
+}
+.hero-btn button {
+  background: var(--clr1);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: none;
+}
+.hero-btn button:nth-child(2) {
+  background: transparent;
+  border: 1px solid var(--clr1);
+  color: var(--clr);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400%;
+  height: 400px;
+}
+.box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+
+  transform: translateX(0%);
+  /* animation: slide 8s ease-in-out infinite; */
+}
+.hero-content .box-img:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-content .box-img:nth-child(2) {
+  animation-delay: 2s;
+}
+.hero-content .box-img:nth-child(3) {
+  animation-delay: 4s;
+}
+.hero-content .box-img:nth-child(4) {
+  animation-delay: 6s;
+}
+/* Define the keyframes for the animation */
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+/* Style the container holding the images */
+
+/*======================================
+ ___NEXT BUTTONS STYLING START HERE___ 
+ =======================================*/
+.three-cards {
+  color: var(--clr1);
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.Threeicons {
+  font-size: 2rem;
+  background: var(--clr1);
+  color: var(--clr);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.three-cards h3 {
+  color: var(--clr);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.three-cards p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: grey;
+  margin-top: 0.3rem;
+}
+/*======================================
+ ___CARDCOMPONENTS STYLING START HERE___ 
+ =======================================*/
+
+.card-component {
+  margin-top: 7rem;
+  color: var(--clr);
+  margin-bottom: 3rem;
+}
+.card-component h1 {
+  text-align: center;
+}
+.card-grids {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-grid {
+  margin: 2rem;
+}
+.card-img {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  margin-inline: auto;
+}
+.card-grids h3 {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.card-grid-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2.5rem;
+}
+.card-grids h5 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+h5 span {
+  color: yellow;
+}
+.card-grid p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  color: grey;
+  margin-block: 0.5rem;
+}
+.grid-icon {
+  font-size: 1.2rem;
+  border: 1px solid var(--clr1);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.cardDetail-img {
+  width: 400px;
+}
+.card-detail img {
+  width: 1000px;
+  height: 500px;
+}
+.card-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  color: var(--clr);
+  padding: 2rem;
+  margin-block: 7rem;
+}
+.cardDetail-head {
+  margin-top: 5rem;
+}
+.cardDetail-head h1 {
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-block: 1rem;
+}
+.cardDetail-head p {
+  font-weight: 300;
+  color: grey;
+}
+.card-detail button {
+  margin-inline: auto;
+  /* display: flex; */
+  margin-top: 3rem;
+  background: var(--clr1);
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+}
+
+.footWear {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  background-image: url(https://images.unsplash.com/photo-1544658030-d0e5163c47f5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZvb3R3ZWFyJTIwaGR8ZW58MHx8MHx8fDA%3D);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+  position: relative;
+  margin-block: 7rem;
+}
+.foot-head {
+  position: absolute;
+  bottom: 5rem;
+  background: transparent;
+  left: 30%;
+}
+.foot-head h1 {
+  color: var(--clr);
+  font-size: 4rem;
+  background: transparent;
+}
+.foot-btn {
+  background: transparent;
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+  margin-inline: 5rem;
+  text-align: center;
+}
+.foot-btn button {
+  background: var(--clr1);
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  border: 2px solid var(--clr1);
+}
+.foot-btn button:nth-child(2) {
+  background: var(--clr);
+}
+
+.two-grid-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 10rem;
+  /* justify-content: space-evenly; */
+}
+.two-grid {
+  width: 50vw;
+  height: auto;
+  position: relative;
+}
+.two-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+.two-grid h2 {
+  color: var(--clr);
+  position: absolute;
+  bottom: 10rem;
+  left: 10rem;
+  background: transparent;
+  font-size: 2rem;
+}
+.two-grid button {
+  background: var(--clr);
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 25px;
+}
+
+/*======================================
+ ___Store Cards STYLING START HERE___ 
+ =======================================*/
+
+ 
+.product-list img{
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+.products-card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+color: var(--clr);
+gap: 1rem;
+text-align: center;
+
+}
+.product-list{
+  margin-block: 2rem;
+}
+  .product-list h2{
+font-weight: 400;
+}
+.product-list p{
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+
+
+
+
+
+
+
+/*======================================
+ ___Media Querry STYLING START HERE___ 
+ =======================================*/
+
+@media (max-width: 800px) {
+  .logo {
+    order: 2;
+  }
+  .nav-icons {
+    order: 2;
+  }
+  .links {
+    flex-direction: column;
+    display: none;
+    margin-top: 3rem;
+    padding: 4rem;
+    color: #070111;
+  }
+
+  .open-nav {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+  }
+  li {
+    background: var(--clr);
+  }
+  li a {
+    color: #070111;
+    background: #fff;
+    z-index: 9999;
+  }
+
+  .box-img {
+    height: 300px;
+  }
+  .card-grids {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .three-cards {
+    flex-flow: wrap;
+  }
+  .three-cards .card {
+    margin: 1rem;
+  }
+}
+@media (max-width: 489px) {
+  .card-grids {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-detail {
+    flex-direction: column;
+  }
+  .card-detail img {
+    height: 200px;
+    width: 300px;
+  }
+  .three-cards .card {
+    width: 100%;
+  }
+}
